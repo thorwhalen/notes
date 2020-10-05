@@ -1,0 +1,20 @@
+
+
+```
+brew install swig 
+git clone --recursive https://github.com/bambocher/pocketsphinx-python
+cd pocketsphinx-python
+```
+Edit file `pocketsphinx-python/deps/sphinxbase/src/libsphinxad/ad_openal.c`
+Change
+```
+#include <al.h>
+#include <alc.h
+```
+to
+```
+#include <OpenAL/al.h>
+#include <OpenAL/alc.h>
+```
+
+And finally install the package python setup.py install in your virtual env.
